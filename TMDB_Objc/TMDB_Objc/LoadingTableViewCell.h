@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LoadingTableViewCell.h
 //  TMDB_Objc
 //
 //  Created by Sergio Freire on 15/11/16.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface LoadingTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *activity;
 
 @end
-

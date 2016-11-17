@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  TMDB_Objc
+//
+//  Created by Sergio Freire on 15/11/16.
+//  Copyright © 2016 Sergio Freire. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "AppConstants.h"
+#import <ILMovieDB/ILMovieDBClient.h>
+#import <TWMessageBarManager/TWMessageBarManager.h>
+#import "CustomImageView.h"
+#import "CustomButton.h"
+#import "UIKit+AFNetworking.h"
+#import "MyFunctions.h"
+#import "DateUtils.h"
+#import "Genre.h"
+#import "API.h"
+#import "AppDelegate.h"
+
+#endif /* PrefixHeader_pch */
