@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  TMDB_Objc
+
+  Created by Sergio Freire on 19/11/16.
+  Copyright © 2016 Sergio Freire. All rights reserved.
+*/
+
+"UPCOMING_MOVIES" = "Próximos Filmes";
+"SEARCH_MOVIES" = "Procurar Filmes";
+"SEARCH_BAR_PLACEHOLDER" = "Procure por filmes";
+"GENERIC_ERROR" = "Hm, algo deu errado";
+"GENERIC_SUCCESS" = "Sucesso!";
+"GENERIC_INTERNET_ERROR" = "Por favor, verifique sua conexão com a internet!";
+"RELEASE_DATE" = "Data de Lançamento";
+"GENRE" = "Gênero";
+"OVERVIEW" = "Sinopse";
