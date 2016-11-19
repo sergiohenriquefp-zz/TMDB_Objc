@@ -19,23 +19,25 @@
     // Do any additional setup after loading the view.
     [self.lTitle setText:self.movieObj.name];
     
-    if (![MyFunctions isStringEmpty:self.movieObj.urlPoster]) {
-        [self.ivPoster loadImageFromUrlString:self.movieObj.urlPoster];
+    if (![StringUtils isStringEmpty:self.movieObj.urlPoster]) {
+        [self.ivPoster loadImageFromUrlString:[[API sharedClient] completePathForPoster:self.movieObj.urlPoster width:self.ivPoster.frame.size.width]];
     }
     else{
         [self.ivPoster setImage:[UIImage imageNamed:@"placeholder_poster"]];
     }
     
-    [self.lRelease setText:[DateUtils showNiceDate:self.movieObj.releaseDate]];
+    [self.lRelease setText:[NSDateFormatter localizedStringFromDate:self.movieObj.releaseDate
+                                                                              dateStyle:NSDateFormatterLongStyle
+                                                                              timeStyle:NSDateFormatterNoStyle]];
     
-    if ([MyFunctions isStringEmpty:[self.movieObj getGenresString]]) {
+    if ([StringUtils isStringEmpty:[self.movieObj getGenresString]]) {
         [self.lGenre setText:@"-"];
     }
     else{
         [self.lGenre setText:[self.movieObj getGenresString]];
     }
     
-    if ([MyFunctions isStringEmpty:self.movieObj.overview]) {
+    if ([StringUtils isStringEmpty:self.movieObj.overview]) {
         [self.lOverview setText:@"-"];
     }
     else{
@@ -44,9 +46,14 @@
 
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewWillAppear:(BOOL)animated{
+
+    [super viewWillAppear:animated];
+    
+    [self.lReleaseTop setText:NSLocalizedString(@"RELEASE_DATE", @"Release Date")];
+    [self.lGenreTop setText:NSLocalizedString(@"GENRE", @"Genre")];
+    [self.lOverviewTop setText:NSLocalizedString(@"OVERVIEW", @"Overview")];
+    
 }
 
 - (void)viewDidLayoutSubviews{

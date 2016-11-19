@@ -10,16 +10,8 @@
 
 @interface DateUtils : NSObject
 
-+(NSDate *)getFormateDateSimple:(NSString *)localDate;
-
-+(NSDate *)getFormateDate:(NSString *)localDate;
-
-+(NSString *)showNiceDate:(NSDate *)dateString;
++(NSDate *)getFormatedDate:(NSString *)localDate;
 
 +(NSString *)getDateAlphabetic:(NSDate *)date;
-
-+ (NSString *)getNomeMes:(int)mes;
-
-+ (NSString *) getMinNomeMes:(int)mes;
 
 @end

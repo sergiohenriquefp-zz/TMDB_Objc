@@ -28,15 +28,17 @@
     [self setTheObj:obj];
     [self.lName setText:self.theObj.name];
     
-    if (![MyFunctions isStringEmpty:self.theObj.urlBackdrop]) {
-        [self.ivPhoto loadImageFromUrlString:self.theObj.urlBackdrop];
+    if (![StringUtils isStringEmpty:self.theObj.urlBackdrop]) {
+        [self.ivPhoto loadImageFromUrlString:[[API sharedClient] completePathForBackdrop:self.theObj.urlBackdrop width:self.ivPhoto.frame.size.width]];
     }
     else{
         [self.ivPhoto setImage:[UIImage imageNamed:@"placeholder_backdrop"]];
     }
     [self.ivPhoto setContentMode:UIViewContentModeScaleAspectFill];
     
-    [self.lDate setText:[DateUtils showNiceDate:obj.releaseDate]];
+    [self.lDate setText:[NSDateFormatter localizedStringFromDate:obj.releaseDate
+                                                       dateStyle:NSDateFormatterShortStyle
+                                                       timeStyle:NSDateFormatterNoStyle]];
     
     [self.lGenre setText:[obj getGenresString]];
     

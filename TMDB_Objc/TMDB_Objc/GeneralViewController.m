@@ -44,7 +44,7 @@
 - (void)callSuccessMessageWithText:(NSString *)text detail:(NSString *)detail{
     
     if (!text) {
-        text = @"Success!";
+        text = NSLocalizedString(@"GENERIC_SUCCESS", @"Success!");
     }
     
     [[TWMessageBarManager sharedInstance] showMessageWithTitle:text
@@ -66,7 +66,7 @@
 - (void)callErrorMessageWithText:(NSString *)text detail:(NSString *)detail{
     
     if (!text) {
-        text = @"Hm, something went wrong...";
+        text = NSLocalizedString(@"GENERIC_ERROR", @"Hm, something went wrong...");
     }
     
     [[TWMessageBarManager sharedInstance] showMessageWithTitle:text

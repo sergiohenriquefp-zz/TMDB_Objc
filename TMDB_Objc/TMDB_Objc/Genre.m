@@ -30,10 +30,27 @@
     
     Genre *obj = [[Genre alloc] init];
     
-    [obj setObjId:[[MyFunctions assertObjectNullForValue:[dictionary valueForKey:@"id"] defaultValue:@0] intValue]];
-    [obj setName:[MyFunctions assertObjectNullForValue:[dictionary valueForKey:@"name"] defaultValue:@""]];
+    [obj setObjId:[[ParseUtils assertObjectNullForValue:[dictionary valueForKey:@"id"] defaultValue:@0] intValue]];
+    [obj setName:[ParseUtils assertObjectNullForValue:[dictionary valueForKey:@"name"] defaultValue:@""]];
     
     return obj;
+}
+
+- (id) initWithCoder: (NSCoder *)coder
+{
+    if (self = [super init])
+    {
+        self.objId = [coder decodeIntForKey:@"objId"];
+        self.name = [coder decodeObjectForKey:@"name"];
+    }
+    
+    return self; // this is missing in the example above
+}
+
+- (void)encodeWithCoder:(NSCoder *)coder;
+{
+    [coder encodeInt:self.objId forKey:@"objId"];
+    [coder encodeObject:self.name forKey:@"name"];
 }
 
 @end

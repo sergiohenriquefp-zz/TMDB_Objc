@@ -26,8 +26,8 @@
     
     [self setTheObj:obj];
     [self.lName setText:self.theObj.name];
-    if (![MyFunctions isStringEmpty:self.theObj.urlPoster]) {
-        [self.ivPhoto loadImageFromUrlString:self.theObj.urlPosterSmall];
+    if (![StringUtils isStringEmpty:self.theObj.urlPoster]) {
+        [self.ivPhoto loadImageFromUrlString:[[API sharedClient] completePathForPoster:self.theObj.urlPoster width:self.ivPhoto.frame.size.width]];
     }
     else{
         [self.ivPhoto setImage:[UIImage imageNamed:@"placeholder_poster"]];

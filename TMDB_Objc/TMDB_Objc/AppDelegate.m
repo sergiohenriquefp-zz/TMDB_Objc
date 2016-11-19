@@ -18,8 +18,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [API sharedClient].apiKey = @"1f54bd990f1cdfb230adb312546d765d";
     [[API sharedClient] verifyGenres];
+    [[API sharedClient] verifyConfiguration];
     return YES;
 }
 

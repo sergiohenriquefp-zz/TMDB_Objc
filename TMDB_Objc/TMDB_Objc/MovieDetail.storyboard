@@ -35,8 +35,9 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="495"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RFt-5w-dZD">
-                                                <rect key="frame" x="8" y="90" width="359" height="160"/>
+                                                <rect key="frame" x="107.5" y="90" width="160" height="160"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="160" id="4Gd-RL-y0n"/>
                                                     <constraint firstAttribute="height" constant="160" id="qtM-qb-56Z"/>
                                                 </constraints>
                                             </imageView>
@@ -207,9 +208,9 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="wdH-l7-Yfj" firstAttribute="leading" secondItem="Kyz-PF-VrJ" secondAttribute="leading" constant="8" id="34b-7x-Ukd"/>
-                                            <constraint firstAttribute="trailing" secondItem="RFt-5w-dZD" secondAttribute="trailing" constant="8" id="39L-tK-gvp"/>
                                             <constraint firstAttribute="trailing" secondItem="leJ-xf-azf" secondAttribute="trailing" constant="8" id="3pd-Vv-tQt"/>
                                             <constraint firstAttribute="trailing" secondItem="o0E-1n-5k8" secondAttribute="trailing" constant="8" id="5kk-Ph-LHl"/>
+                                            <constraint firstItem="RFt-5w-dZD" firstAttribute="centerX" secondItem="Kyz-PF-VrJ" secondAttribute="centerX" id="9sZ-Ju-Jbn"/>
                                             <constraint firstItem="o0E-1n-5k8" firstAttribute="leading" secondItem="Kyz-PF-VrJ" secondAttribute="leading" constant="8" id="BTs-F6-Fiy"/>
                                             <constraint firstItem="E3m-hp-Zib" firstAttribute="leading" secondItem="Kyz-PF-VrJ" secondAttribute="leading" constant="8" id="GfH-t4-v0B"/>
                                             <constraint firstAttribute="trailing" secondItem="dey-sf-zez" secondAttribute="trailing" constant="8" id="Jlr-pT-jdK"/>
@@ -231,7 +232,6 @@
                                             <constraint firstItem="vwZ-sf-qEI" firstAttribute="top" secondItem="leJ-xf-azf" secondAttribute="bottom" id="rYA-x0-iLy"/>
                                             <constraint firstAttribute="trailing" secondItem="wdH-l7-Yfj" secondAttribute="trailing" constant="8" id="rl5-Bg-Det"/>
                                             <constraint firstItem="dey-sf-zez" firstAttribute="leading" secondItem="Kyz-PF-VrJ" secondAttribute="leading" constant="8" id="xgY-WN-wkE"/>
-                                            <constraint firstItem="RFt-5w-dZD" firstAttribute="leading" secondItem="Kyz-PF-VrJ" secondAttribute="leading" constant="8" id="xxg-ZH-5qN"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -264,7 +264,7 @@
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="VxW-EM-lBR">
-                                        <rect key="frame" x="93" y="23" width="189" height="49"/>
+                                        <rect key="frame" x="93.5" y="23" width="189" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="A23-c2-83n"/>
                                             <constraint firstAttribute="width" constant="189" id="gLW-hp-60E"/>
@@ -304,8 +304,11 @@
                         <outlet property="btBack" destination="Ben-Iv-Fw0" id="ncV-0Z-zbC"/>
                         <outlet property="ivPoster" destination="RFt-5w-dZD" id="6wH-pr-KIM"/>
                         <outlet property="lGenre" destination="o0E-1n-5k8" id="eFA-P2-eZN"/>
+                        <outlet property="lGenreTop" destination="dey-sf-zez" id="Mgs-JW-fLP"/>
                         <outlet property="lOverview" destination="vwZ-sf-qEI" id="Ths-lU-hjV"/>
+                        <outlet property="lOverviewTop" destination="leJ-xf-azf" id="fH2-TX-bdh"/>
                         <outlet property="lRelease" destination="3gA-I1-HYo" id="NFF-MT-vAG"/>
+                        <outlet property="lReleaseTop" destination="wdH-l7-Yfj" id="AKQ-eH-AFJ"/>
                         <outlet property="lTitle" destination="E3m-hp-Zib" id="dXZ-An-o88"/>
                         <outlet property="scrollView" destination="GAp-xW-7IX" id="Q7n-ky-Ga1"/>
                         <outlet property="vBack" destination="Kyz-PF-VrJ" id="Xaz-Kl-jj7"/>

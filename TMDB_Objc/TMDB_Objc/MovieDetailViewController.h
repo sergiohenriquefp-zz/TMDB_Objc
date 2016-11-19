@@ -18,8 +18,11 @@
 @property (weak, nonatomic) IBOutlet UIImageView *ivPoster;
 
 @property (weak, nonatomic) IBOutlet UILabel *lTitle;
+@property (weak, nonatomic) IBOutlet UILabel *lReleaseTop;
 @property (weak, nonatomic) IBOutlet UILabel *lRelease;
+@property (weak, nonatomic) IBOutlet UILabel *lGenreTop;
 @property (weak, nonatomic) IBOutlet UILabel *lGenre;
+@property (weak, nonatomic) IBOutlet UILabel *lOverviewTop;
 @property (weak, nonatomic) IBOutlet UILabel *lOverview;
 
 @property (strong, nonatomic) Movie *movieObj;

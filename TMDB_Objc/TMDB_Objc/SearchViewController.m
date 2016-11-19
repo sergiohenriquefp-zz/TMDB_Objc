@@ -74,6 +74,8 @@
     [super viewWillAppear:animated];
     
     [self.navigationController setNavigationBarHidden:YES animated:YES];
+    
+    [headerSearchCell.tfSearch setPlaceholder:NSLocalizedString(@"SEARCH_BAR_PLACEHOLDER", @"Search for Movies")];
 }
 
 - (void)viewDidAppear:(BOOL)animated{
@@ -112,6 +114,9 @@
 }
 
 - (void)callInitialPage{
+    
+    [[API sharedClient] verifyGenres];
+    [[API sharedClient] verifyConfiguration];
     
     if ([headerSearchCell.tfSearch.text isEqualToString:@""]) {
         
@@ -167,9 +172,7 @@
                 }
             }
             
-            NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:pageNumberSearch],@"page",headerSearchCell.tfSearch.text,@"query", nil];
-            
-            [[API sharedClient] GET:kILMovieDBSearchMovie parameters:params block:^(id responseObject, NSError *error) {
+            [[API sharedClient] searchMoviesWithQuery:headerSearchCell.tfSearch.text page:pageNumberSearch block:^(id responseObject, NSError *error) {
                 if (!error) {
                     if (![@"" isEqualToString:headerSearchCell.tfSearch.text]) {
                         
@@ -215,7 +218,7 @@
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [[self pullView] endRefreshing];
                     });
-                    [self callErrorMessageWithText:nil detail:@"Error"];
+                    [self callErrorMessageWithText:nil detail:NSLocalizedString(@"GENERIC_ERROR", @"Hm, something went wrong...")];
                 }
             }];
             
@@ -225,7 +228,7 @@
             isUsingServicesSearch = false;
             [self.tableView reloadData];
             [self.pullView endRefreshing];
-            [self callErrorMessageWithText:nil detail:@"No Internet!"];
+            [self callErrorMessageWithText:nil detail:NSLocalizedString(@"GENERIC_INTERNET_ERROR", @"Internet Error")];
         }
     }
 }
@@ -255,9 +258,7 @@
                 }
             }
             
-            NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInt:pageNumberRecent],@"page",@"genres", @"append_to_response", nil];
-            
-            [[API sharedClient] GET:kILMovieDBMovieUpcoming parameters:params block:^(id responseObject, NSError *error) {
+            [[API sharedClient] upcomingMoviesWithPage:pageNumberRecent block:^(id responseObject, NSError *error) {
                 if (!error) {
                     NSArray * array = responseObject[@"results"];
                     
@@ -299,7 +300,7 @@
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [[self pullView] endRefreshing];
                     });
-                    [self callErrorMessageWithText:nil detail:@"Error"];
+                    [self callErrorMessageWithText:nil detail:NSLocalizedString(@"GENERIC_ERROR", @"Hm, something went wrong...")];
                 }
             }];
 
@@ -308,7 +309,7 @@
             isUsingServicesSearch = false;
             [self.tableView reloadData];
             [self.pullView endRefreshing];
-            [self callErrorMessageWithText:nil detail:@"No Internet!"];
+            [self callErrorMessageWithText:nil detail:NSLocalizedString(@"GENERIC_INTERNET_ERROR", @"Internet Error")];
         }
     }
 }
@@ -485,7 +486,7 @@
     if ([headerSearchCell.tfSearch.text isEqualToString:@""] && !hasKeyBoard) {
         
         //Sem search
-        [self.lTitle setText:@"Upcoming Movies"];
+        [self.lTitle setText:NSLocalizedString(@"UPCOMING_MOVIES", @"Upcoming Movies")];
         if (indexPath.section == 0) {
             
             if (self.listRecent.count > 0) {
@@ -508,7 +509,7 @@
     }
     else{
         
-        [self.lTitle setText:@"Search Movies"];
+        [self.lTitle setText:NSLocalizedString(@"SEARCH_MOVIES", @"Search Movies")];
         //Com search
         if (self.listSearch.count > 0) {
             

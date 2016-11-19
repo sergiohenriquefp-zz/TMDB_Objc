@@ -16,7 +16,6 @@
 @property (strong, nonatomic) NSString *overview;
 @property (strong, nonatomic) NSDate *releaseDate;
 @property (strong, nonatomic) NSString *urlPoster;
-@property (strong, nonatomic) NSString *urlPosterSmall;
 @property (strong, nonatomic) NSString *urlBackdrop;
 @property (strong, nonatomic) NSMutableArray *genresID;
 

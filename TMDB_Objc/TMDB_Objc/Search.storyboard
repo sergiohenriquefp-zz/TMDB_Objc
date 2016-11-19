@@ -162,8 +162,8 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="He was a wise man who invented beer. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9To-bc-ITy">
-                                                                    <rect key="frame" x="8" y="28" width="250" height="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="He was a wise man who invented beer. " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9To-bc-ITy">
+                                                                    <rect key="frame" x="8" y="28" width="254" height="17"/>
                                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="240" id="18y-i8-a16"/>
@@ -187,7 +187,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99/99/2016" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CHP-Ns-I5E">
-                                                                    <rect key="frame" x="261" y="28" width="65" height="17"/>
+                                                                    <rect key="frame" x="265" y="28" width="61" height="17"/>
                                                                     <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="60" id="0yV-ja-65j"/>
@@ -196,7 +196,7 @@
                                                                         <constraint firstAttribute="width" constant="280" id="PRP-UQ-GeP"/>
                                                                         <constraint firstAttribute="height" constant="60" id="WLe-wI-WoM"/>
                                                                         <constraint firstAttribute="width" constant="240" id="dBI-PV-DZ7"/>
-                                                                        <constraint firstAttribute="width" constant="65" id="flH-8j-N2D"/>
+                                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="flH-8j-N2D"/>
                                                                     </constraints>
                                                                     <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="11"/>
                                                                     <color key="textColor" red="0.61960784310000006" green="0.61960784310000006" blue="0.61960784310000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -36,30 +36,12 @@
     
     Movie *obj = [[Movie alloc] init];
     
-    [obj setObjId:[[MyFunctions assertObjectNullForValue:[dictionary valueForKey:@"id"] defaultValue:@0] intValue]];
-    [obj setName:[MyFunctions assertObjectNullForValue:[dictionary valueForKey:@"title"] defaultValue:@""]];
-    
-    NSString *pathPoster = [MyFunctions assertObjectNullForValue:[dictionary valueForKey:@"poster_path"] defaultValue:@""];
-    if ([MyFunctions isStringEmpty:pathPoster]) {
-        [obj setUrlPoster:pathPoster];
-        [obj setUrlPosterSmall:pathPoster];
-    }
-    else{
-        [obj setUrlPoster:[NSString stringWithFormat:@"%@%@?api_key=%@",@"https://image.tmdb.org/t/p/w500/",pathPoster,[ILMovieDBClient sharedClient].apiKey]];
-        [obj setUrlPosterSmall:[NSString stringWithFormat:@"%@%@?api_key=%@",@"https://image.tmdb.org/t/p/w92/",pathPoster,[ILMovieDBClient sharedClient].apiKey]];
-    }
-    
-    NSString *pathBackdrop = [MyFunctions assertObjectNullForValue:[dictionary valueForKey:@"backdrop_path"] defaultValue:@""];
-    if ([MyFunctions isStringEmpty:pathBackdrop]) {
-        [obj setUrlBackdrop:pathBackdrop];
-    }
-    else{
-        [obj setUrlBackdrop:[NSString stringWithFormat:@"%@%@?api_key=%@",@"https://image.tmdb.org/t/p/w300/",pathBackdrop,[ILMovieDBClient sharedClient].apiKey]];
-    }
-    
-    [obj setReleaseDate:[DateUtils getFormateDateSimple:[dictionary valueForKey:@"release_date"]]];
-    
-    [obj setOverview:[MyFunctions assertObjectNullForValue:[dictionary valueForKey:@"overview"] defaultValue:@""]];
+    [obj setObjId:[[ParseUtils assertObjectNullForValue:[dictionary valueForKey:@"id"] defaultValue:@0] intValue]];
+    [obj setName:[ParseUtils assertObjectNullForValue:[dictionary valueForKey:@"title"] defaultValue:@""]];
+    [obj setUrlPoster:[ParseUtils assertObjectNullForValue:[dictionary valueForKey:@"poster_path"] defaultValue:@""]];
+    [obj setUrlBackdrop:[ParseUtils assertObjectNullForValue:[dictionary valueForKey:@"backdrop_path"] defaultValue:@""]];
+    [obj setReleaseDate:[DateUtils getFormatedDate:[dictionary valueForKey:@"release_date"]]];
+    [obj setOverview:[ParseUtils assertObjectNullForValue:[dictionary valueForKey:@"overview"] defaultValue:@""]];
     
     NSArray * genresArray = dictionary[@"genre_ids"];
     if (genresArray) {

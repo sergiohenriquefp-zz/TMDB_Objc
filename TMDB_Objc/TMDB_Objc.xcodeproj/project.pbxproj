@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F228C93F3AFF6CB8047DE77 /* libPods-TMDB_Objc.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 93FBE8B3E30D5C3702E61AFB /* libPods-TMDB_Objc.a */; };
+		C34658121DDFF5E600D7E7A1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C34658141DDFF5E600D7E7A1 /* Localizable.strings */; };
 		C362970C1DDB4C1400B20788 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C362970B1DDB4C1400B20788 /* main.m */; };
 		C362970F1DDB4C1400B20788 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C362970E1DDB4C1400B20788 /* AppDelegate.m */; };
 		C36297171DDB4C1400B20788 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C36297161DDB4C1400B20788 /* Assets.xcassets */; };
@@ -21,19 +22,18 @@
 		C36297661DDB7D6800B20788 /* MovieSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C36297651DDB7D6800B20788 /* MovieSearchCell.m */; };
 		C36297691DDB7D7700B20788 /* MovieContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C36297681DDB7D7700B20788 /* MovieContentCell.m */; };
 		C362976D1DDB7FD000B20788 /* HeaderSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C362976C1DDB7FD000B20788 /* HeaderSearchCell.m */; };
-		C36297711DDB822E00B20788 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = C36297701DDB822E00B20788 /* Reachability.m */; };
 		C36297751DDB82E100B20788 /* MovieDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C36297741DDB82E100B20788 /* MovieDetailViewController.m */; };
 		C36297771DDB833E00B20788 /* MovieDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C36297761DDB833E00B20788 /* MovieDetail.storyboard */; };
 		C362977B1DDB906500B20788 /* LoadingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C362977A1DDB906500B20788 /* LoadingTableViewCell.m */; };
-		C362977F1DDB928B00B20788 /* MyFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = C362977E1DDB928B00B20788 /* MyFunctions.m */; };
 		C36297831DDBE86300B20788 /* API.m in Sources */ = {isa = PBXBuildFile; fileRef = C36297821DDBE86300B20788 /* API.m */; };
-		C36297861DDBFCC200B20788 /* DateUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = C36297851DDBFCC200B20788 /* DateUtils.m */; };
 		C362978A1DDC03D200B20788 /* Genre.m in Sources */ = {isa = PBXBuildFile; fileRef = C36297891DDC03D200B20788 /* Genre.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		93FBE8B3E30D5C3702E61AFB /* libPods-TMDB_Objc.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TMDB_Objc.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8E2C860C2B124512228B0E /* Pods-TMDB_Objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDB_Objc.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TMDB_Objc/Pods-TMDB_Objc.debug.xcconfig"; sourceTree = "<group>"; };
+		C34658161DDFF60D00D7E7A1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C34658171DDFF62400D7E7A1 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		C36297071DDB4C1400B20788 /* TMDB_Objc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMDB_Objc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C362970B1DDB4C1400B20788 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C362970D1DDB4C1400B20788 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -60,19 +60,13 @@
 		C36297681DDB7D7700B20788 /* MovieContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieContentCell.m; sourceTree = "<group>"; };
 		C362976B1DDB7FD000B20788 /* HeaderSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderSearchCell.h; sourceTree = "<group>"; };
 		C362976C1DDB7FD000B20788 /* HeaderSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderSearchCell.m; sourceTree = "<group>"; };
-		C362976F1DDB822E00B20788 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		C36297701DDB822E00B20788 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		C36297731DDB82E100B20788 /* MovieDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailViewController.h; sourceTree = "<group>"; };
 		C36297741DDB82E100B20788 /* MovieDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailViewController.m; sourceTree = "<group>"; };
 		C36297761DDB833E00B20788 /* MovieDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MovieDetail.storyboard; sourceTree = "<group>"; };
 		C36297791DDB906500B20788 /* LoadingTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingTableViewCell.h; sourceTree = "<group>"; };
 		C362977A1DDB906500B20788 /* LoadingTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingTableViewCell.m; sourceTree = "<group>"; };
-		C362977D1DDB928B00B20788 /* MyFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyFunctions.h; sourceTree = "<group>"; };
-		C362977E1DDB928B00B20788 /* MyFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyFunctions.m; sourceTree = "<group>"; };
 		C36297811DDBE86300B20788 /* API.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = API.h; sourceTree = "<group>"; };
 		C36297821DDBE86300B20788 /* API.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = API.m; sourceTree = "<group>"; };
-		C36297841DDBFCC200B20788 /* DateUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtils.h; sourceTree = "<group>"; };
-		C36297851DDBFCC200B20788 /* DateUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtils.m; sourceTree = "<group>"; };
 		C36297881DDC03D200B20788 /* Genre.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Genre.h; sourceTree = "<group>"; };
 		C36297891DDC03D200B20788 /* Genre.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Genre.m; sourceTree = "<group>"; };
 		E642B4145C1A7C2524E3D13E /* Pods-TMDB_Objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TMDB_Objc.release.xcconfig"; path = "Pods/Target Support Files/Pods-TMDB_Objc/Pods-TMDB_Objc.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +101,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C34658181DE003E800D7E7A1 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				C36297591DDB748D00B20788 /* CustomButton */,
+				C36297581DDB73B600B20788 /* CustomImageView */,
+			);
+			name = Interfaces;
+			sourceTree = "<group>";
+		};
 		C36296FE1DDB4C1400B20788 = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				C36297801DDBE85200B20788 /* API */,
-				C362975F1DDB759C00B20788 /* Custom Libs */,
+				C362975F1DDB759C00B20788 /* Custom Views */,
 				C36297411DDB573C00B20788 /* Model */,
 				C362973F1DDB570200B20788 /* Storyboards */,
 				C36297401DDB572C00B20788 /* Controller */,
@@ -165,8 +168,8 @@
 		C36297401DDB572C00B20788 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C36297721DDB82BF00B20788 /* Movie Detail */,
 				C362975E1DDB758C00B20788 /* General */,
+				C36297721DDB82BF00B20788 /* Movie Detail */,
 				C362975D1DDB758600B20788 /* Search */,
 			);
 			name = Controller;
@@ -223,33 +226,22 @@
 			name = General;
 			sourceTree = "<group>";
 		};
-		C362975F1DDB759C00B20788 /* Custom Libs */ = {
+		C362975F1DDB759C00B20788 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
-				C362977C1DDB926700B20788 /* MyFunctions */,
 				C36297781DDB904500B20788 /* LoadingTableViewCell */,
-				C362976E1DDB822400B20788 /* Reachability */,
-				C36297591DDB748D00B20788 /* CustomButton */,
-				C36297581DDB73B600B20788 /* CustomImageView */,
+				C34658181DE003E800D7E7A1 /* Interfaces */,
 			);
-			name = "Custom Libs";
+			name = "Custom Views";
 			sourceTree = "<group>";
 		};
 		C36297631DDB762000B20788 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				C36297161DDB4C1400B20788 /* Assets.xcassets */,
+				C34658141DDFF5E600D7E7A1 /* Localizable.strings */,
 			);
 			name = Resources;
-			sourceTree = "<group>";
-		};
-		C362976E1DDB822400B20788 /* Reachability */ = {
-			isa = PBXGroup;
-			children = (
-				C362976F1DDB822E00B20788 /* Reachability.h */,
-				C36297701DDB822E00B20788 /* Reachability.m */,
-			);
-			name = Reachability;
 			sourceTree = "<group>";
 		};
 		C36297721DDB82BF00B20788 /* Movie Detail */ = {
@@ -268,17 +260,6 @@
 				C362977A1DDB906500B20788 /* LoadingTableViewCell.m */,
 			);
 			name = LoadingTableViewCell;
-			sourceTree = "<group>";
-		};
-		C362977C1DDB926700B20788 /* MyFunctions */ = {
-			isa = PBXGroup;
-			children = (
-				C36297841DDBFCC200B20788 /* DateUtils.h */,
-				C36297851DDBFCC200B20788 /* DateUtils.m */,
-				C362977D1DDB928B00B20788 /* MyFunctions.h */,
-				C362977E1DDB928B00B20788 /* MyFunctions.m */,
-			);
-			name = MyFunctions;
 			sourceTree = "<group>";
 		};
 		C36297801DDBE85200B20788 /* API */ = {
@@ -352,8 +333,9 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
+				"pt-BR",
 			);
 			mainGroup = C36296FE1DDB4C1400B20788;
 			productRefGroup = C36297081DDB4C1400B20788 /* Products */;
@@ -370,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34658121DDFF5E600D7E7A1 /* Localizable.strings in Resources */,
 				C36297771DDB833E00B20788 /* MovieDetail.storyboard in Resources */,
 				C362971A1DDB4C1400B20788 /* LaunchScreen.storyboard in Resources */,
 				C36297171DDB4C1400B20788 /* Assets.xcassets in Resources */,
@@ -437,8 +420,6 @@
 				C362977B1DDB906500B20788 /* LoadingTableViewCell.m in Sources */,
 				C362970F1DDB4C1400B20788 /* AppDelegate.m in Sources */,
 				C36297661DDB7D6800B20788 /* MovieSearchCell.m in Sources */,
-				C36297861DDBFCC200B20788 /* DateUtils.m in Sources */,
-				C36297711DDB822E00B20788 /* Reachability.m in Sources */,
 				C36297691DDB7D7700B20788 /* MovieContentCell.m in Sources */,
 				C362976D1DDB7FD000B20788 /* HeaderSearchCell.m in Sources */,
 				C36297541DDB680600B20788 /* GeneralViewController.m in Sources */,
@@ -448,13 +429,21 @@
 				C362970C1DDB4C1400B20788 /* main.m in Sources */,
 				C36297621DDB75B300B20788 /* CustomImageView.m in Sources */,
 				C362978A1DDC03D200B20788 /* Genre.m in Sources */,
-				C362977F1DDB928B00B20788 /* MyFunctions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C34658141DDFF5E600D7E7A1 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C34658161DDFF60D00D7E7A1 /* en */,
+				C34658171DDFF62400D7E7A1 /* pt-BR */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		C36297181DDB4C1400B20788 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -470,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -519,6 +509,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
