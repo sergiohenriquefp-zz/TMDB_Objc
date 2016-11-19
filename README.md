@@ -1,8 +1,10 @@
 # TMDB_Objc
 App for cinephiles and movie hobbyists.
 
-## Example
+## How to Run
+This Project uses CocoaPods - https://cocoapods.org
 To run the project, clone the repo, and run 'pod install' from the directory first.
+After that, double-click on the workspace file.
 
 ## External Libraries using CocoaPods
 	# TWMessageBarManager
